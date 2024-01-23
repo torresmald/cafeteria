@@ -1,0 +1,61 @@
+@use "base/variables";
+@use "base/mixins";
+.main {
+  background-color: variables.$blanco;
+  padding: 2rem;
+  @include mixins.tablet {
+    padding: 10rem;
+    margin-top: -10rem;
+    position: relative;
+  }
+  h2 {
+    color: variables.$color-primario;
+    text-align: center;
+    text-transform: uppercase;
+    span {
+      font-size: 1.6rem;
+      color: variables.$color-secundario;
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  }
+  h2::after {
+    content: "";
+    background-image: url(../img/cafe.svg);
+    background-size: 90px;
+    display: block;
+    height: 7rem;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .listado-iconos{
+    margin: 4rem;
+    .icono{
+        img{
+            width: 30%;
+            margin: auto;
+        }
+        p{
+            font-size: 3rem;
+            color: variables.$color-primario;
+            font-weight: 700;
+        }
+    }
+  }
+  @include mixins.tablet { 
+    .listado-iconos{
+        display: flex;
+        gap: 4rem;
+        justify-content: center;
+        .icono{
+            img{
+                width: 35%;
+            }
+            p{
+                font-size: 2rem;
+            }
+        }
+    }
+  }
+}

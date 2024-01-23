@@ -1,0 +1,77 @@
+@use 'base/variables';
+@use 'base/mixins';
+.header{
+    padding: 5rem 0;
+    position: relative;
+    @include mixins.tablet { 
+        min-height: 50rem;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: variables.$negro;
+        opacity: .6;
+    }
+    .contenido-header{
+        position: relative;
+    }
+    @include mixins.tablet { 
+        .barra{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+    }
+    .logo{
+        width: 50%;
+        margin: auto;
+    }
+    @include mixins.tablet { 
+        .logo{
+            width: 20rem;
+            margin: 0;
+        }
+    }
+    .nav-principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 5rem 0;
+        a{
+            font-weight: 700;
+            color: variables.$blanco;
+            text-transform: uppercase;
+            &:hover{
+                color: variables.$color-secundario;
+            }
+            &.activo{
+                color: variables.$color-secundario;
+            }
+        }
+    }
+    @include mixins.tablet { 
+        .nav-principal{
+            flex-direction: row;
+        }
+    }
+    .texto-header{
+        color: variables.$blanco;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+
+
+// Header de Inicio
+
+.header-inicio{
+    background-image: url(../img/header_inicio.jpg);
+    background-position: left center;
+}

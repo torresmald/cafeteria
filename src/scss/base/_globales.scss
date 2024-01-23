@@ -13,11 +13,13 @@ html {
 body {
   font-family: variables.$fuente-principal;
   font-size: 1.6rem;
+  background-color: variables.$cafe-claro;
 }
 
 p {
   color: variables.$negro;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 a {
@@ -43,6 +45,12 @@ h2{
 
 h3{
     font-size: 3.2rem;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .contenedor {
