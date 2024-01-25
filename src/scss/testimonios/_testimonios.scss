@@ -1,0 +1,49 @@
+@use '../base/variables';
+@use '../base/mixins';
+
+.testimonios{
+    padding: 4rem;
+    background-color: variables.$blanco;
+    width: 85%;
+    margin: -7rem auto 0;
+    @include mixins.tablet { 
+        padding: 10rem;
+        width: 75%;
+    }
+    h2 {
+        color: variables.$color-primario;
+        text-align: center;
+        text-transform: uppercase;
+        span {
+          font-size: 1.6rem;
+          color: variables.$color-secundario;
+          display: block;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+      }
+      h2::after {
+        content: "";
+        background-image: url(../img/cafe.svg);
+        background-size: 90px;
+        display: block;
+        height: 7rem;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .testimonio{
+        background-color: variables.$cafe-claro;
+        border-radius: 1rem;
+        padding: 2rem;
+        @include mixins.tablet { 
+          width: 60%;
+          margin: auto;
+          
+        }
+            .autor{
+                text-align: right;
+                color: variables.$color-primario;
+                font-weight: 700;
+            }
+      }
+}

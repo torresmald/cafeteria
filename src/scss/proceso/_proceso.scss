@@ -1,0 +1,61 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.proceso-cafe {
+  background-color: variables.$blanco;
+  padding: 2rem;
+  width: 85%;
+  @include mixins.tablet {
+    width: 75%;
+    padding: 10rem;
+    margin-top: -10rem;
+    position: relative;
+  }
+  .procesos {
+    .proceso {
+      .imagen {
+        margin-bottom: 2rem;
+      }
+      .texto {
+        margin-bottom: 5rem;
+        h3 {
+          position: relative;
+          color: variables.$color-primario;
+          text-transform: uppercase;
+          margin: 0;
+        }
+        h3::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: 0;
+          width: 30%;
+          height: 3px;
+          background-color: variables.$color-secundario;
+        }
+      }
+    }
+    @include mixins.tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .proceso{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        .imagen{
+          margin: 0;
+          width: 50%;
+        }
+        .texto{
+          margin: 0;
+          width: 50%;
+        }
+      }
+      .proceso:nth-child(even){
+        flex-direction: row-reverse;
+      }
+    }
+    
+  }
+}

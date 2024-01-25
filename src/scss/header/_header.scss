@@ -4,7 +4,7 @@
     padding: 5rem 0;
     position: relative;
     @include mixins.tablet { 
-        min-height: 50rem;
+        min-height: 60rem;
     }
     &::before{
         content: '';
@@ -74,4 +74,29 @@
 .header-inicio{
     background-image: url(../img/header_inicio.jpg);
     background-position: left center;
+}
+
+.header-nosotros{
+    background-image: url(../img/header_nosotros.jpg);
+    background-position: left center;
+}
+
+.header-proceso{
+    background-image: url(../img/header_proceso.jpg);
+    background-position: left center;
+}
+
+.header-menu{
+    background-image: url(../img/header_menu.jpg);
+    background-position: center;
+}
+
+.header-galeria{
+    background-image: url(../img/header_galeria.jpg);
+    background-position: center;
+}
+
+.header-contacto{
+    background-image: url(../img/header_contacto.jpg);
+    background-position: center;
 }

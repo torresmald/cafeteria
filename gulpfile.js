@@ -5,11 +5,16 @@ const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
+
 
 function css() {
   return src('src/scss/app.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('build/css'))
 }
 
